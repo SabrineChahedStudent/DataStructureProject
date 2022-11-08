@@ -1,0 +1,39 @@
+#ifndef MAILSERVER_HPP
+#define MAILSERVER_HPP
+#include <queue>
+#include "email.hpp"
+#include "UserAccount.hpp"
+
+// Our Server Contains a QUEUE
+// Of Emails To be Sent to Destination
+
+class MailServer
+{
+public:
+    friend class Email;
+    friend class UserAccount;
+
+    void sendMailsToServer( Email & ) ;
+    Email keepEmailCopy ( Email & ) const ;
+    bool resendEmail( Email & );
+    void destroyEmail();
+
+
+
+private:
+    queue<Email> EmailsToSend;
+
+    // Some Utility Functions //
+    bool sendEmailToDestination( Email & );
+
+    bool checkReachDestination( Email & ) const ;
+
+    bool contains ( Email & ) const ;
+
+    bool reSendEmailConditions() const ;
+
+    void notifySenderOfAnError() const ;
+
+};
+
+#endif // MAILSERVER_HPP
