@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1668770389 source:c:\users\lenovo\desktop\interestinggithubprojects\hashtables\src\hashtable.cpp
+	"HashTable.hpp"
+	<iostream>
+
+1668783877 c:\users\lenovo\desktop\interestinggithubprojects\hashtables\include\hashtable.hpp
+	<vector>
+	<algorithm>
+	<functional>
+	<string>
+	<iostream>
+	<cmath>
+
+1668856593 source:c:\users\lenovo\desktop\interestinggithubprojects\hashtables\main.cpp
+	<iostream>
+	<chrono>
+	"HashTable.hpp"
+
